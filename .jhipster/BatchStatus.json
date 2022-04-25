@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20220425213343",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "batch_status",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BatchStatus",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "batch",
+      "otherEntityRelationshipName": "bachStatus",
+      "relationshipName": "bach",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

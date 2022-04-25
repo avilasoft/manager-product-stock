@@ -1,0 +1,71 @@
+{
+  "applications": "*",
+  "changelogDate": "20220425213341",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "unit",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "symbol",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isBase",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Unit",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unitType",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "unitType",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "price",
+      "otherEntityName": "providerProductPrice",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "providerProductPrice",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "child",
+      "ownerSide": true,
+      "relationshipName": "parent",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "parent",
+      "ownerSide": false,
+      "relationshipName": "child",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

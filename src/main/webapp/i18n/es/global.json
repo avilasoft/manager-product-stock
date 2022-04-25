@@ -7,6 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "businessAssociate": "Business Associate",
+        "provider": "Provider",
+        "unitType": "Unit Type",
+        "unit": "Unit",
+        "category": "Category",
+        "batchStatus": "Batch Status",
+        "batch": "Batch",
+        "providerProduct": "Provider Product",
+        "providerProductPrice": "Provider Product Price",
+        "batchProduct": "Batch Product",
+        "productCategory": "Product Category",
+        "product": "Product",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20220425213342",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "category",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Category",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "productCategory",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "productCategory",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

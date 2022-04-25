@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20220425213344",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "batch",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Batch",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "batchStatus",
+      "otherEntityRelationshipName": "bach",
+      "relationshipName": "bachStatus",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "businessAssociate",
+      "otherEntityRelationshipName": "batch",
+      "relationshipName": "businessAssociate",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "batchProduct",
+      "otherEntityRelationshipName": "batch",
+      "relationshipName": "batchProduct",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

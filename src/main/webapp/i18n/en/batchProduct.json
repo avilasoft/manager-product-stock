@@ -1,0 +1,27 @@
+{
+  "managerProductStockApp": {
+    "batchProduct": {
+      "home": {
+        "title": "Batch Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Batch Product",
+        "createOrEditLabel": "Create or edit a Batch Product",
+        "notFound": "No Batch Products found"
+      },
+      "created": "A new Batch Product is created with identifier {{ param }}",
+      "updated": "A Batch Product is updated with identifier {{ param }}",
+      "deleted": "A Batch Product is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Batch Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Batch Product"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "batch": "Batch",
+      "providerProduct": "Provider Product"
+    }
+  }
+}
