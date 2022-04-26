@@ -1,0 +1,152 @@
+/*
+ * Modelo de datos de partidas v1.0
+ */
+ 
+/* BusinessAssociate: Negocio, constructora, personal natural o juridica que necesita generar partidas(Batch) */
+
+entity BusinessAssociate {
+    name String required
+    descrption String required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+/* Provider: Provedor al cual recurre el BusinessAssociate para obtener sus productos */
+entity Provider {
+    name String required
+    descrption String required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+/* UnitType: Tipos de unidades disponibles, por ejemplo: VOLUMEN, MASS, PRESSION, MONEY */
+entity UnitType{
+    name String required
+    description String
+}
+/* Unidad de medida para un producto*/
+entity Unit {
+    name String required
+    description String required
+    symbol String required
+    /*For calculation*/
+    isBase Boolean
+}
+/* Category: Categoria */
+entity Category {
+    name String required
+    description String
+}
+/* BatchStatus: Estado del batch. Por ejemplo: COMPLETED, PENDING, CANCELLED*/
+entity BatchStatus {
+    name String required
+    description String
+}
+
+/* Batch: Partida de obra. Lista de productos necesarios para una obra civil*/
+entity Batch {
+    name String required
+    description String
+}
+
+/** ProviderProduct: Producto suministrado por el proveedor */
+entity ProviderProduct {
+    name String required
+    description String
+}
+/** ProviderProductPrice: Precio base del producto suministrado por el proedor */
+entity ProviderProductPrice {
+	name String required
+    value BigDecimal required
+}
+/* BatchProduct: Producto listado del batch */
+entity BatchProduct {
+	name String required
+    description String
+}
+
+/* ProductCategory: Categoria del producto */
+entity ProductCategory {
+    name String required
+    description String
+}
+
+/* ProductCategory: Categoria del producto */
+entity Price {
+    name String required
+    description String
+}
+
+/* ProductCategory: Categoria del producto */
+entity PriceHistory {
+    name String required
+    description String
+}
+
+/* ProductCategory: Categoria del producto */
+entity UnitEquivalence {
+    name String required
+    description String
+}
+
+/** Product: producto necesario para su consumición final*/
+entity Product {
+	item String required
+    name String required
+    description String
+    image ImageBlob
+    quantity Float
+    
+}
+
+relationship OneToOne {
+	/*Usuario con acceso a funcionalidades de Provider*/
+    Provider{user(login) required} to User
+    /*Usuario con acceso a funcionalidades de BusinessAssociate*/
+    BusinessAssociate{user(login) required} to User
+    PriceHistory{parent(name)} to PriceHistory{child(name)}
+}
+relationship ManyToOne {
+    /* La partidad puede tener varios estados antes de su uso oficial*/
+    Batch{bachStatus(name) required} to BatchStatus
+    /* Toda unidad requiere un tipo asociado a su uso en el mundo real: volumen, dinero, peso*/
+    Unit{unitType(name) required} to UnitType
+    /* Diferentes category puede tener un mismo producto */
+    ProductCategory{category(name) required} to Category
+
+    ProviderProductPrice{price(name)} to Price
+    /* Un proveedor puede tener muchos productos */
+    ProviderProduct{provider(name) required} to Provider 
+    /* un BusinessAssociate puedee tener varias partidas */
+    Batch{businessAssociate(name) required} to BusinessAssociate
+    
+    /* Una partida esta compuesta por productos de proveedor*/
+    BatchProduct{product(name) required} to Product{batchProduct}
+}
+relationship OneToMany {
+	/* Unidad del producto para representar su cantidad */
+    Unit{product} to Product{unit(name) required}
+    /* Un precio se puede representar en varias unidades */
+    Unit{ProviderProductPrice} to ProviderProductPrice{unit(name) required}
+    /* diferentes provider puede tener un mismo producto*/
+    ProviderProduct{product} to Product{providerProduct(name) required}
+	/* Diferentes category puede tener un mismo producto */
+    ProductCategory{product} to Product{productCategory(name) required}
+     /* Un batch puede tener muchos productos */
+    BatchProduct{batch} to Batch{batchProduct(name) required}
+    /*Precio de un product fijado por el provider. Sólo el provider puede gestionarlo*/
+    ProviderProductPrice{providerProduct} to ProviderProduct{providerProductPrice(name) required}
+  	Price{priceHistory} to PriceHistory{price(name) required}
+    Unit{unitEquivalence} to UnitEquivalence{unit(name) required}
+    UnitEquivalence{parent(name)} to UnitEquivalence{child(name)}
+}
+
+service all with serviceClass
+paginate all with pagination

@@ -1,0 +1,28 @@
+{
+  "managerProductStockApp": {
+    "priceHistory": {
+      "home": {
+        "title": "Price Histories",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Price History",
+        "createOrEditLabel": "Crear o editar Price History",
+        "notFound": "Ningún Price Histories encontrado"
+      },
+      "created": "Un nuevo Price History ha sido creado con el identificador {{ param }}",
+      "updated": "Un Price History ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Price History ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Price History {{ id }}?"
+      },
+      "detail": {
+        "title": "Price History"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "parent": "Parent",
+      "child": "Child",
+      "price": "Price"
+    }
+  }
+}

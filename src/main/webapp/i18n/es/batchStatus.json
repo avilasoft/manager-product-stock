@@ -1,0 +1,25 @@
+{
+  "managerProductStockApp": {
+    "batchStatus": {
+      "home": {
+        "title": "Batch Statuses",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Batch Status",
+        "createOrEditLabel": "Crear o editar Batch Status",
+        "notFound": "Ningún Batch Statuses encontrado"
+      },
+      "created": "Un nuevo Batch Status ha sido creado con el identificador {{ param }}",
+      "updated": "Un Batch Status ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Batch Status ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Batch Status {{ id }}?"
+      },
+      "detail": {
+        "title": "Batch Status"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

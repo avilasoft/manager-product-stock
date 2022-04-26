@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003853",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "provider_product_price",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "ProviderProductPrice: Precio base del producto suministrado por el proedor",
+  "jpaMetamodelFiltering": false,
+  "name": "ProviderProductPrice",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "providerProduct",
+      "otherEntityRelationshipName": "providerProductPrice",
+      "relationshipName": "providerProduct",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "price",
+      "otherEntityRelationshipName": "providerProductPrice",
+      "relationshipName": "price",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "providerProductPrice",
+      "relationshipName": "unit",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

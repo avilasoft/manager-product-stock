@@ -1,0 +1,28 @@
+{
+  "managerProductStockApp": {
+    "unitEquivalence": {
+      "home": {
+        "title": "Unit Equivalences",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Unit Equivalence",
+        "createOrEditLabel": "Create or edit a Unit Equivalence",
+        "notFound": "No Unit Equivalences found"
+      },
+      "created": "A new Unit Equivalence is created with identifier {{ param }}",
+      "updated": "A Unit Equivalence is updated with identifier {{ param }}",
+      "deleted": "A Unit Equivalence is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Unit Equivalence {{ id }}?"
+      },
+      "detail": {
+        "title": "Unit Equivalence"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "parent": "Parent",
+      "unit": "Unit",
+      "child": "Child"
+    }
+  }
+}

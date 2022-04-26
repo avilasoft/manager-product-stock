@@ -1,0 +1,48 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003858",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "unit_equivalence",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UnitEquivalence",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unitEquivalence",
+      "otherEntityRelationshipName": "child",
+      "relationshipName": "parent",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "unitEquivalence",
+      "relationshipName": "unit",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unitEquivalence",
+      "otherEntityRelationshipName": "parent",
+      "relationshipName": "child",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

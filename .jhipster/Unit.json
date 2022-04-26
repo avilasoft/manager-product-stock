@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003848",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "unit",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "symbol",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isBase",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Unit",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "product",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "providerProductPrice",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "providerProductPrice",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "unitEquivalence",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "unitEquivalence",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unitType",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "unitType",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

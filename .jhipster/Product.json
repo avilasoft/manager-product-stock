@@ -1,0 +1,71 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003859",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "item",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Product: producto necesario para su consumición final",
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "unit",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "providerProduct",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "providerProduct",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "productCategory",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productCategory",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "batchProduct",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "batchProduct",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

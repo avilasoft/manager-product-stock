@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003854",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "batch_product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BatchProduct",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "batch",
+      "otherEntityRelationshipName": "batchProduct",
+      "relationshipName": "batch",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "batchProduct",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

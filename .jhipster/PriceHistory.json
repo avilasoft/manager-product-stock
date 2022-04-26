@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003857",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "price_history",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PriceHistory",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "priceHistory",
+      "otherEntityRelationshipName": "child",
+      "ownerSide": true,
+      "relationshipName": "parent",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "priceHistory",
+      "otherEntityRelationshipName": "parent",
+      "ownerSide": false,
+      "relationshipName": "child",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "price",
+      "otherEntityRelationshipName": "priceHistory",
+      "relationshipName": "price",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

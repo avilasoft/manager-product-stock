@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003850",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "batch_status",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BatchStatus",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

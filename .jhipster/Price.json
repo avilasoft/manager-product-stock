@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20220426003856",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "price",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Price",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "priceHistory",
+      "otherEntityRelationshipName": "price",
+      "relationshipName": "priceHistory",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
