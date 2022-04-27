@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220427001018",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "provider_product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "ProviderProduct: Producto suministrado por el proveedor",
+  "jpaMetamodelFiltering": false,
+  "name": "ProviderProduct",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "provider",
+      "otherEntityRelationshipName": "providerProduct",
+      "relationshipName": "provider",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "providerProductPrice",
+      "otherEntityRelationshipName": "providerProduct",
+      "relationshipName": "providerProductPrice",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "providerProduct",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

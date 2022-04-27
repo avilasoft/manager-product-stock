@@ -1,0 +1,25 @@
+{
+  "managerProductStockApp": {
+    "unitType": {
+      "home": {
+        "title": "Unit Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Unit Type",
+        "createOrEditLabel": "Create or edit a Unit Type",
+        "notFound": "No Unit Types found"
+      },
+      "created": "A new Unit Type is created with identifier {{ param }}",
+      "updated": "A Unit Type is updated with identifier {{ param }}",
+      "deleted": "A Unit Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Unit Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Unit Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

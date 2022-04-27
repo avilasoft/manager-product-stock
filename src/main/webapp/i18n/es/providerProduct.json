@@ -1,0 +1,28 @@
+{
+  "managerProductStockApp": {
+    "providerProduct": {
+      "home": {
+        "title": "Provider Products",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Provider Product",
+        "createOrEditLabel": "Crear o editar Provider Product",
+        "notFound": "Ningún Provider Products encontrado"
+      },
+      "created": "Un nuevo Provider Product ha sido creado con el identificador {{ param }}",
+      "updated": "Un Provider Product ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Provider Product ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Provider Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Provider Product"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "provider": "Provider",
+      "providerProductPrice": "Provider Product Price",
+      "product": "Product"
+    }
+  }
+}

@@ -51,6 +51,21 @@ public class CacheConfiguration {
             createCache(cm, com.avilasoft.managerproductstock.domain.User.class.getName());
             createCache(cm, com.avilasoft.managerproductstock.domain.Authority.class.getName());
             createCache(cm, com.avilasoft.managerproductstock.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.avilasoft.managerproductstock.domain.BusinessAssociate.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Provider.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.UnitType.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Unit.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Unit.class.getName() + ".products");
+            createCache(cm, com.avilasoft.managerproductstock.domain.Unit.class.getName() + ".prices");
+            createCache(cm, com.avilasoft.managerproductstock.domain.BatchStatus.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Batch.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProviderProduct.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProviderProductPrice.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.BatchProduct.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProductCategory.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProductCategory.class.getName() + ".products");
+            createCache(cm, com.avilasoft.managerproductstock.domain.Price.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Product.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,26 @@
+{
+  "managerProductStockApp": {
+    "price": {
+      "home": {
+        "title": "Prices",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Price",
+        "createOrEditLabel": "Crear o editar Price",
+        "notFound": "Ningún Prices encontrado"
+      },
+      "created": "Un nuevo Price ha sido creado con el identificador {{ param }}",
+      "updated": "Un Price ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Price ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Price {{ id }}?"
+      },
+      "detail": {
+        "title": "Price"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "unit": "Unit"
+    }
+  }
+}
