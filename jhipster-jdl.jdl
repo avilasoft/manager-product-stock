@@ -108,7 +108,7 @@ relationship ManyToOne {
     Batch{businessAssociate(name) required} to BusinessAssociate
     /* Una partida esta compuesta por productos de proveedor*/
     BatchProduct{product(name) required} to Product
-     /* Un batch puede tener muchos productos */
+    /* Un batch puede tener muchos productos */
     BatchProduct{batch(name) required} to Batch
     /*Precio de un product fijado por el provider. Sólo el provider puede gestionarlo*/
     ProviderProduct{providerProductPrice(name) required} to ProviderProductPrice
