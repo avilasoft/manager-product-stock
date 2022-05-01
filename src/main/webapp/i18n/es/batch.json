@@ -2,25 +2,25 @@
   "managerProductStockApp": {
     "batch": {
       "home": {
-        "title": "Partidas",
+        "title": "Proyecto",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nueva Partida",
-        "createOrEditLabel": "Crear o editar Partida",
+        "createLabel": "Crear nuevo proyecto",
+        "createOrEditLabel": "Crear o editar Proyecto",
         "notFound": "Ninguna Partida encontrada"
       },
-      "created": "Un nueva nueva partida ha sido creado con el identificador {{ param }}",
-      "updated": "Una partida ha sido actualizada con el identificador {{ param }}",
-      "deleted": "Una partida ha sido eliminada con el identificador {{ param }}",
+      "created": "Un nuevo proyecto ha sido creado con el identificador {{ param }}",
+      "updated": "Un proyecto ha sido actualizado ha sido actualizada con el identificador {{ param }}",
+      "deleted": "Un proyecto ha sido eliminado con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar la partida {{ id }}?"
+        "question": "¿Seguro que quiere eliminar el pryecto {{ id }}?"
       },
       "detail": {
-        "title": "Partida"
+        "title": "Proyecto"
       },
       "id": "ID",
       "name": "Nombre",
       "description": "Descripción",
-      "bachStatus": "Estatus de la partida",
+      "bachStatus": "Estatus del proyecto",
       "businessAssociate": "Negocio asociado"
     }
   }
