@@ -2,26 +2,26 @@
   "managerProductStockApp": {
     "batch": {
       "home": {
-        "title": "Batches",
+        "title": "Partidas",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Batch",
-        "createOrEditLabel": "Crear o editar Batch",
-        "notFound": "Ningún Batches encontrado"
+        "createLabel": "Crear nueva Partida",
+        "createOrEditLabel": "Crear o editar Partida",
+        "notFound": "Ninguna Partida encontrada"
       },
-      "created": "Un nuevo Batch ha sido creado con el identificador {{ param }}",
-      "updated": "Un Batch ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Batch ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nueva nueva partida ha sido creado con el identificador {{ param }}",
+      "updated": "Una partida ha sido actualizada con el identificador {{ param }}",
+      "deleted": "Una partida ha sido eliminada con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Batch {{ id }}?"
+        "question": "¿Seguro que quiere eliminar la partida {{ id }}?"
       },
       "detail": {
-        "title": "Batch"
+        "title": "Partida"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "bachStatus": "Bach Status",
-      "businessAssociate": "Business Associate"
+      "name": "Nombre",
+      "description": "Descripción",
+      "bachStatus": "Estatus de la partida",
+      "businessAssociate": "Negocio asociado"
     }
   }
 }
