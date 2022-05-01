@@ -2,25 +2,25 @@
   "managerProductStockApp": {
     "price": {
       "home": {
-        "title": "Prices",
+        "title": "Precios",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Price",
-        "createOrEditLabel": "Crear o editar Price",
-        "notFound": "Ningún Prices encontrado"
+        "createLabel": "Crear nuevo Precio",
+        "createOrEditLabel": "Crear o editar Precio",
+        "notFound": "Ningún Precio encontrado"
       },
-      "created": "Un nuevo Price ha sido creado con el identificador {{ param }}",
-      "updated": "Un Price ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Price ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nuevo precio ha sido creado con el identificador {{ param }}",
+      "updated": "Un precio ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un precio ha sido eliminado con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Price {{ id }}?"
+        "question": "¿Seguro que quiere eliminar el precio {{ id }}?"
       },
       "detail": {
-        "title": "Price"
+        "title": "Precio"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "unit": "Unit"
+      "name": "Nombre",
+      "description": "Descripción",
+      "unit": "Unidad"
     }
   }
 }
