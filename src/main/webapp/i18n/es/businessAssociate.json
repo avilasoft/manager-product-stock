@@ -2,31 +2,31 @@
   "managerProductStockApp": {
     "businessAssociate": {
       "home": {
-        "title": "Business Associates",
+        "title": "Negocio asociado",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Business Associate",
-        "createOrEditLabel": "Crear o editar Business Associate",
-        "notFound": "Ningún Business Associates encontrado"
+        "createLabel": "Crear nuevo negocio asociado",
+        "createOrEditLabel": "Crear o editar negocio asociado",
+        "notFound": "Ningún negocio asociado encontrado"
       },
-      "created": "Un nuevo Business Associate ha sido creado con el identificador {{ param }}",
-      "updated": "Un Business Associate ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Business Associate ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nuevo negocio asociado ha sido creado con el identificador {{ param }}",
+      "updated": "ha sido actualizado el negocio asociado con el identificador {{ param }}",
+      "deleted": "ha sido eliminado el negocio asociado con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Business Associate {{ id }}?"
+        "question": "¿Seguro que quiere eliminar el negocio asociado {{ id }}?"
       },
       "detail": {
-        "title": "Business Associate"
+        "title": "Negocio Asociado"
       },
       "id": "ID",
-      "name": "Name",
-      "descrption": "Descrption",
+      "name": "Nombre",
+      "descrption": "Descripción",
       "email": "Email",
-      "phone": "Phone",
-      "addressLine1": "Address Line 1",
-      "addressLine2": "Address Line 2",
-      "city": "City",
-      "country": "Country",
-      "user": "User"
+      "phone": "Telefono",
+      "addressLine1": "Dirección 1",
+      "addressLine2": "Dirección 2",
+      "city": "Ciudad",
+      "country": "País",
+      "user": "Usuario"
     }
   }
 }

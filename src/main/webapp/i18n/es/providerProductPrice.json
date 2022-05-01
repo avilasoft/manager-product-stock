@@ -2,25 +2,25 @@
   "managerProductStockApp": {
     "providerProductPrice": {
       "home": {
-        "title": "Provider Product Prices",
+        "title": "Precios de productos del proveedor",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Provider Product Price",
-        "createOrEditLabel": "Crear o editar Provider Product Price",
-        "notFound": "Ningún Provider Product Prices encontrado"
+        "createLabel": "Crear nuevo precio del producto del proveedor",
+        "createOrEditLabel": "Crear o editar precio del producto del proveedor",
+        "notFound": "Ningún precio del producto del proveedor encontrado"
       },
-      "created": "Un nuevo Provider Product Price ha sido creado con el identificador {{ param }}",
-      "updated": "Un Provider Product Price ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Provider Product Price ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nuevo precio del producto del proveedor ha sido creado con el identificador {{ param }}",
+      "updated": "Un precio del producto del proveedor ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un precio del producto del proveedor ha sido eliminado con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Provider Product Price {{ id }}?"
+        "question": "¿Seguro que quiere eliminar el precio del producto del proveedor {{ id }}?"
       },
       "detail": {
-        "title": "Provider Product Price"
+        "title": "Precio del producto del proveedor"
       },
       "id": "ID",
-      "name": "Name",
-      "value": "Value",
-      "price": "Price"
+      "name": "Nombre",
+      "value": "Valor",
+      "price": "Precio"
     }
   }
 }

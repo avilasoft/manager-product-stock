@@ -2,24 +2,24 @@
   "managerProductStockApp": {
     "batchStatus": {
       "home": {
-        "title": "Batch Statuses",
+        "title": "Estatus del proyecto",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Batch Status",
-        "createOrEditLabel": "Crear o editar Batch Status",
-        "notFound": "Ningún Batch Statuses encontrado"
+        "createLabel": "Crear nuevo estatus del proyecto",
+        "createOrEditLabel": "Crear o editar estatus del proyecto",
+        "notFound": "Ningún estatus del proyecto se ha encontrado"
       },
-      "created": "Un nuevo Batch Status ha sido creado con el identificador {{ param }}",
-      "updated": "Un Batch Status ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Batch Status ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nuevo estatus del proyecto ha sido creado con el identificador {{ param }}",
+      "updated": "ha sido actualizado el estatus del proyecto con el identificador {{ param }}",
+      "deleted": "ha sido eliminado el estatus del proyecto con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Batch Status {{ id }}?"
+        "question": "¿Seguro que quiere eliminar estatus del proyecto {{ id }}?"
       },
       "detail": {
-        "title": "Batch Status"
+        "title": "Estatus del proyecto"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description"
+      "name": "Nombre",
+      "description": "Descripción"
     }
   }
 }

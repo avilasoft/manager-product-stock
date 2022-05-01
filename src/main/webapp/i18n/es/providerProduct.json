@@ -2,27 +2,27 @@
   "managerProductStockApp": {
     "providerProduct": {
       "home": {
-        "title": "Provider Products",
+        "title": "Productos del proveedor",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Provider Product",
-        "createOrEditLabel": "Crear o editar Provider Product",
-        "notFound": "Ningún Provider Products encontrado"
+        "createLabel": "Crear nuevo Producto del proveedor",
+        "createOrEditLabel": "Crear o editar producto del proveedor",
+        "notFound": "Ningún producto del proveedor encontrado"
       },
-      "created": "Un nuevo Provider Product ha sido creado con el identificador {{ param }}",
-      "updated": "Un Provider Product ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Provider Product ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nuevo producto del proveedor ha sido creado con el identificador {{ param }}",
+      "updated": "Un producto del proveedor ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un producto del proveedor ha sido eliminado con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Provider Product {{ id }}?"
+        "question": "¿Seguro que quiere eliminar un producto del proveedor {{ id }}?"
       },
       "detail": {
-        "title": "Provider Product"
+        "title": "Producto del proveedor"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "provider": "Provider",
-      "providerProductPrice": "Provider Product Price",
-      "product": "Product"
+      "name": "Nombre",
+      "description": "Descripción",
+      "provider": "Proveedor",
+      "providerProductPrice": "Precio del producto del proveedor",
+      "product": "Producto"
     }
   }
 }

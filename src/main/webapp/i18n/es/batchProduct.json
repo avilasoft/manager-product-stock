@@ -2,26 +2,26 @@
   "managerProductStockApp": {
     "batchProduct": {
       "home": {
-        "title": "Batch Products",
+        "title": "Partidas del proyecto",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Batch Product",
-        "createOrEditLabel": "Crear o editar Batch Product",
-        "notFound": "Ningún Batch Products encontrado"
+        "createLabel": "Crear nueva partida",
+        "createOrEditLabel": "Crear o editar partida",
+        "notFound": "Ninguna partida encontrada"
       },
-      "created": "Un nuevo Batch Product ha sido creado con el identificador {{ param }}",
-      "updated": "Un Batch Product ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Batch Product ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nueva nueva partida ha sido creada con el identificador {{ param }}",
+      "updated": "ha sido actualizada la patida con el identificador {{ param }}",
+      "deleted": "ha sido eliminado la partida con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Batch Product {{ id }}?"
+        "question": "¿Seguro que quiere eliminar la partida {{ id }}?"
       },
       "detail": {
-        "title": "Batch Product"
+        "title": "Partida"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "product": "Product",
-      "batch": "Batch"
+      "name": "Nombre",
+      "description": "Descripción",
+      "product": "Producto",
+      "batch": "Proyecto"
     }
   }
 }

@@ -2,31 +2,31 @@
   "managerProductStockApp": {
     "provider": {
       "home": {
-        "title": "Providers",
+        "title": "Proveedores",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Provider",
-        "createOrEditLabel": "Crear o editar Provider",
-        "notFound": "Ningún Providers encontrado"
+        "createLabel": "Crear nuevo Proveedor",
+        "createOrEditLabel": "Crear o editar Proveedor",
+        "notFound": "Ningún Proveedor ha sido encontrado"
       },
-      "created": "Un nuevo Provider ha sido creado con el identificador {{ param }}",
-      "updated": "Un Provider ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Provider ha sido eliminado con el identificador {{ param }}",
+      "created": "Un nuevo Proveedor ha sido creado con el identificador {{ param }}",
+      "updated": "Un Proveedor ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Proveedor ha sido eliminado con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Provider {{ id }}?"
+        "question": "¿Seguro que quiere eliminar el proveedor {{ id }}?"
       },
       "detail": {
-        "title": "Provider"
+        "title": "Proveedor"
       },
       "id": "ID",
-      "name": "Name",
-      "descrption": "Descrption",
+      "name": "Nombre",
+      "descrption": "Descripción",
       "email": "Email",
-      "phone": "Phone",
-      "addressLine1": "Address Line 1",
-      "addressLine2": "Address Line 2",
-      "city": "City",
-      "country": "Country",
-      "user": "User"
+      "phone": "Telefono",
+      "addressLine1": "Dirección 1",
+      "addressLine2": "Dirección 2",
+      "city": "Ciudad",
+      "country": "País",
+      "user": "Usuario"
     }
   }
 }

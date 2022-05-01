@@ -2,25 +2,25 @@
   "managerProductStockApp": {
     "productCategory": {
       "home": {
-        "title": "Product Categories",
+        "title": "Categorias del producto",
         "refreshListLabel": "Refrescar lista",
-        "createLabel": "Crear nuevo Product Category",
-        "createOrEditLabel": "Crear o editar Product Category",
-        "notFound": "Ningún Product Categories encontrado"
+        "createLabel": "Crear una nueva categoría del producto",
+        "createOrEditLabel": "Crear o editar una nueva categoría del producto",
+        "notFound": "Ninguna categoría del producto ha sido encontrado"
       },
-      "created": "Un nuevo Product Category ha sido creado con el identificador {{ param }}",
-      "updated": "Un Product Category ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Product Category ha sido eliminado con el identificador {{ param }}",
+      "created": "Una nueva categoria del producto ha sido creado con el identificador {{ param }}",
+      "updated": "ha sido actualizada la categoria del producto con el identificador {{ param }}",
+      "deleted": "ha sido eliminada la categoria del producto con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Product Category {{ id }}?"
+        "question": "¿Seguro que quiere eliminar la categoria del producto{{ id }}?"
       },
       "detail": {
-        "title": "Product Category"
+        "title": "Categoria del prodcuto"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "product": "Product"
+      "name": "Nombre",
+      "description": "Descripción",
+      "product": "Producto"
     }
   }
 }
