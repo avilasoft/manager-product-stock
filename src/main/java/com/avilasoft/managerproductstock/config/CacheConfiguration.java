@@ -51,6 +51,26 @@ public class CacheConfiguration {
             createCache(cm, com.avilasoft.managerproductstock.domain.User.class.getName());
             createCache(cm, com.avilasoft.managerproductstock.domain.Authority.class.getName());
             createCache(cm, com.avilasoft.managerproductstock.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.avilasoft.managerproductstock.domain.BusinessAssociate.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Unit.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Unit.class.getName() + ".projectItemListItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.Unit.class.getName() + ".providerItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.Project.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProjectGroup.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProjectItemList.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProjectItemListItem.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProjectItemListItem.class.getName() + ".unitPriceListItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.Item.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.Item.class.getName() + ".providerItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.Provider.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ProviderItem.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.UnitPriceList.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.UnitPriceList.class.getName() + ".unitPriceListItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.UnitPriceList.class.getName() + ".computedPriceListItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.UnitPriceListItem.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ComputedPriceList.class.getName());
+            createCache(cm, com.avilasoft.managerproductstock.domain.ComputedPriceList.class.getName() + ".computedPriceListItems");
+            createCache(cm, com.avilasoft.managerproductstock.domain.ComputedPriceListItem.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

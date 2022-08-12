@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014328",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "unit_price_list",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "unitPriceListTotal",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UnitPriceList",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "unitPriceListItem",
+      "otherEntityRelationshipName": "unitPriceList",
+      "relationshipName": "unitPriceListItem",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "computedPriceListItem",
+      "otherEntityRelationshipName": "unitPriceList",
+      "relationshipName": "computedPriceListItem",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "projectItemList",
+      "otherEntityRelationshipName": "unitPriceList",
+      "ownerSide": false,
+      "relationshipName": "projectItemList",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,29 @@
+{
+  "managerProductStockApp": {
+    "computedPriceListItem": {
+      "home": {
+        "title": "Computed Price List Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Computed Price List Item",
+        "createOrEditLabel": "Create or edit a Computed Price List Item",
+        "notFound": "No Computed Price List Items found"
+      },
+      "created": "A new Computed Price List Item is created with identifier {{ param }}",
+      "updated": "A Computed Price List Item is updated with identifier {{ param }}",
+      "deleted": "A Computed Price List Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Computed Price List Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Computed Price List Item"
+      },
+      "id": "ID",
+      "code": "Code",
+      "name": "Name",
+      "computedCostTotal": "Computed Cost Total",
+      "computedQuantityTotal": "Computed Quantity Total",
+      "unitPriceList": "Unit Price List",
+      "computedPriceList": "Computed Price List"
+    }
+  }
+}

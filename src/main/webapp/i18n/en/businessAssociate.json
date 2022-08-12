@@ -1,0 +1,32 @@
+{
+  "managerProductStockApp": {
+    "businessAssociate": {
+      "home": {
+        "title": "Business Associates",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Business Associate",
+        "createOrEditLabel": "Create or edit a Business Associate",
+        "notFound": "No Business Associates found"
+      },
+      "created": "A new Business Associate is created with identifier {{ param }}",
+      "updated": "A Business Associate is updated with identifier {{ param }}",
+      "deleted": "A Business Associate is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Business Associate {{ id }}?"
+      },
+      "detail": {
+        "title": "Business Associate"
+      },
+      "id": "ID",
+      "nickname": "Nickname",
+      "name": "Name",
+      "lastname": "Lastname",
+      "comercialName": "Comercial Name",
+      "phone": "Phone",
+      "type": "Type",
+      "user": "User",
+      "provider": "Provider",
+      "project": "Project"
+    }
+  }
+}

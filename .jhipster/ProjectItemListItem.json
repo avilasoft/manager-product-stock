@@ -1,0 +1,73 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014324",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project_item_list_item",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dimension",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ProjectItemListItem",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "unitPriceListItem",
+      "otherEntityRelationshipName": "projectItemListItem",
+      "relationshipName": "unitPriceListItem",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "projectItemList",
+      "otherEntityRelationshipName": "projectItemListItem",
+      "relationshipName": "projectItemList",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "projectItemListItem",
+      "relationshipName": "item",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "providerItem",
+      "otherEntityRelationshipName": "projectItemListItem",
+      "relationshipName": "providerItem",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "projectItemListItem",
+      "relationshipName": "unit",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

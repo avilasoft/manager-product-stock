@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014326",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "provider",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Provider",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "comercialName",
+      "otherEntityName": "businessAssociate",
+      "otherEntityRelationshipName": "provider",
+      "ownerSide": true,
+      "relationshipName": "businessAssociate",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

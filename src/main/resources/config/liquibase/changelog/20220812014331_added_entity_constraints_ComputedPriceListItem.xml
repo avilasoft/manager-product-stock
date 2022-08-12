@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity ComputedPriceListItem.
+    -->
+    <changeSet id="20220812014331-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="unit_price_list_id"
+                                 baseTableName="computed_price_list_item"
+                                 constraintName="fk_computed_price_list_item__unit_price_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit_price_list"/>
+
+        <addForeignKeyConstraint baseColumnNames="computed_price_list_id"
+                                 baseTableName="computed_price_list_item"
+                                 constraintName="fk_computed_price_list_item__computed_price_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="computed_price_list"/>
+    </changeSet>
+</databaseChangeLog>

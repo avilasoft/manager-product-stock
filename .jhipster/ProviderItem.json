@@ -1,0 +1,55 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014327",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "provider_item",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "ProviderProduct: Producto suministrado por el proveedor",
+  "jpaMetamodelFiltering": false,
+  "name": "ProviderItem",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "provider",
+      "otherEntityRelationshipName": "providerItem",
+      "relationshipName": "provider",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "providerItem",
+      "relationshipName": "unit",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "providerItem",
+      "relationshipName": "item",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

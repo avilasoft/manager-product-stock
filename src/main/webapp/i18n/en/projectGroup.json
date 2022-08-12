@@ -1,0 +1,24 @@
+{
+  "managerProductStockApp": {
+    "projectGroup": {
+      "home": {
+        "title": "Project Groups",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Project Group",
+        "createOrEditLabel": "Create or edit a Project Group",
+        "notFound": "No Project Groups found"
+      },
+      "created": "A new Project Group is created with identifier {{ param }}",
+      "updated": "A Project Group is updated with identifier {{ param }}",
+      "deleted": "A Project Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Project Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Project Group"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014323",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project_item_list",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ProjectItemListType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "EXCAVACION,DE,ZANJAS,RELLENO,OTRO"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ProjectItemListStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DRAFT,COMPLETE,DISCARD"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ProjectItemList",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "unitPriceList",
+      "otherEntityRelationshipName": "projectItemList",
+      "ownerSide": true,
+      "relationshipName": "unitPriceList",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "computedPriceList",
+      "otherEntityRelationshipName": "projectItemList",
+      "ownerSide": true,
+      "relationshipName": "computedPriceList",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "projectItemList",
+      "relationshipName": "project",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

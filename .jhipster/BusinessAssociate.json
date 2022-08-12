@@ -1,0 +1,69 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014319",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "business_associate",
+  "fields": [
+    {
+      "fieldName": "nickname",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastname",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "comercialName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "BusinessAssociateType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PROVIDER,CLIENT,COMPANY"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BusinessAssociate",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "businessAssociate",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "provider",
+      "otherEntityRelationshipName": "businessAssociate",
+      "ownerSide": false,
+      "relationshipName": "provider",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "businessAssociate",
+      "ownerSide": false,
+      "relationshipName": "project",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

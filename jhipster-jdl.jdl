@@ -1,0 +1,152 @@
+/*
+ * Modelo de datos de partidas v1.0
+ */
+ 
+/* BusinessAssociate: Negocio, constructora, personal natural o juridica que necesita generar partidas(Batch) */
+
+entity BusinessAssociate {
+    nickname String required
+    name String required
+    lastname String required
+    comercialName String
+    phone String 
+    type BusinessAssociateType required
+}
+enum BusinessAssociateType {
+	PROVIDER, CLIENT, COMPANY
+}
+
+/* UnitType: Tipos de unidades disponibles, por ejemplo: VOLUMEN, MASS, PRESSION, MONEY */
+enum UnitType{
+    MASS_OR_WEIGHT, 
+    VOLUME, 
+    AMOUNT,
+    MONEY
+}
+/* Unidad de medida para un producto*/
+entity Unit {
+    name String required
+    description String required
+    symbol String required
+    type UnitType required
+}
+
+entity Project{
+	name String
+    type ProjectType
+}
+
+enum ProjectType{
+	RED_AGUA_POTABLE,
+    CLOACAS,
+    DESAGUES PLUVIALES,
+    OTROS
+}
+
+entity ProjectGroup{
+	name String
+}
+
+/* Batch: Partida de obra. Lista de productos necesarios para una obra civil*/
+entity ProjectItemList {
+    name String required
+    description String
+    type ProjectItemListType required
+    status ProjectItemListStatus required
+}
+
+enum ProjectItemListStatus{
+	DRAFT,
+    COMPLETE,
+    DISCARD
+}
+
+enum ProjectItemListType{
+	EXCAVACION DE ZANJAS,
+    RELLENO,
+    OTRO
+}
+
+entity ProjectItemListItem{
+    code String
+    name String required
+	dimension String required
+    quantity Float required
+}
+
+entity Item{
+	name String required
+    description String
+    type ItemType
+    image ImageBlob
+}
+
+enum ItemType{
+	MATERIALES, 
+    MANO_DE_OBRA, 
+    EQUIPOS
+}
+
+entity Provider {
+	name String required
+	description String
+}
+
+/** ProviderProduct: Producto suministrado por el proveedor */
+entity ProviderItem {
+    name String required
+    description String
+    cost Float
+}
+
+entity UnitPriceList{
+	code String required
+    unitPriceListTotal Float
+}
+
+entity UnitPriceListItem{
+	code String required
+    name String
+    unitCostTotal Float required
+}
+
+entity ComputedPriceList{
+	code String required
+    computedPriceListTotal Float
+}
+
+entity ComputedPriceListItem{
+	code String required
+    name String
+    computedCostTotal Float required
+    computedQuantityTotal Float required
+}
+
+relationship OneToOne {
+    BusinessAssociate{user(login) required} to User
+    Provider{businessAssociate(comercialName) required} to BusinessAssociate {provider}
+    Project{businessAssociate(comercialName) required} to BusinessAssociate {project}
+  	ProjectItemList{unitPriceList(code)} to UnitPriceList {projectItemList}
+    ProjectItemList{computedPriceList(code)} to ComputedPriceList {projectItemList}
+}
+relationship ManyToOne {  
+    ProviderItem{provider(name) required} to Provider 
+    ProjectItemList{project(name) required} to Project
+    Project{projectGroup(name) required} to ProjectGroup
+    ProjectItemListItem{projectItemList(name) required} to ProjectItemList
+    ProjectItemListItem{item(name) required} to Item
+    ProjectItemListItem{providerItem(name)} to ProviderItem
+}
+relationship OneToMany {
+	/* Unidad del producto para representar su cantidad */
+    Unit{projectItemListItem} to ProjectItemListItem{unit(name) required}
+    Unit{providerItem} to ProviderItem{unit(name) required}
+    Item{providerItem} to ProviderItem{item(name) required}
+    ProjectItemListItem{unitPriceListItem} to UnitPriceListItem{projectItemListItem(name) required}
+	UnitPriceList{unitPriceListItem} to UnitPriceListItem{unitPriceList(code) required}
+    UnitPriceList{computedPriceListItem} to ComputedPriceListItem{unitPriceList(code) required}
+    ComputedPriceList{computedPriceListItem} to ComputedPriceListItem{computedPriceList(code) required}
+}
+
+service all with serviceClass
+paginate all with pagination

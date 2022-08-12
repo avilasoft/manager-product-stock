@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20220812014321",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ProjectType",
+      "fieldValues": "RED_AGUA_POTABLE,CLOACAS,DESAGUES,PLUVIALES,OTROS"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Project",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "comercialName",
+      "otherEntityName": "businessAssociate",
+      "otherEntityRelationshipName": "project",
+      "ownerSide": true,
+      "relationshipName": "businessAssociate",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "projectGroup",
+      "otherEntityRelationshipName": "project",
+      "relationshipName": "projectGroup",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

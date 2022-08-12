@@ -1,0 +1,11 @@
+export enum ProjectType {
+  RED_AGUA_POTABLE = 'RED_AGUA_POTABLE',
+
+  CLOACAS = 'CLOACAS',
+
+  DESAGUES = 'DESAGUES',
+
+  PLUVIALES = 'PLUVIALES',
+
+  OTROS = 'OTROS',
+}

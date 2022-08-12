@@ -1,0 +1,28 @@
+{
+  "managerProductStockApp": {
+    "unitPriceListItem": {
+      "home": {
+        "title": "Unit Price List Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Unit Price List Item",
+        "createOrEditLabel": "Create or edit a Unit Price List Item",
+        "notFound": "No Unit Price List Items found"
+      },
+      "created": "A new Unit Price List Item is created with identifier {{ param }}",
+      "updated": "A Unit Price List Item is updated with identifier {{ param }}",
+      "deleted": "A Unit Price List Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Unit Price List Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Unit Price List Item"
+      },
+      "id": "ID",
+      "code": "Code",
+      "name": "Name",
+      "unitCostTotal": "Unit Cost Total",
+      "projectItemListItem": "Project Item List Item",
+      "unitPriceList": "Unit Price List"
+    }
+  }
+}
