@@ -127,47 +127,6 @@ export const ProjectItemListItemUpdate = (props: RouteComponentProps<{ id: strin
                 }}
               />
               <ValidatedField
-                label={translate('managerProductStockApp.projectItemListItem.dimension')}
-                id="project-item-list-item-dimension"
-                name="dimension"
-                data-cy="dimension"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                }}
-              />
-              <ValidatedField
-                label={translate('managerProductStockApp.projectItemListItem.quantity')}
-                id="project-item-list-item-quantity"
-                name="quantity"
-                data-cy="quantity"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                  validate: v => isNumber(v) || translate('entity.validation.number'),
-                }}
-              />
-              <ValidatedField
-                id="project-item-list-item-projectItemList"
-                name="projectItemList"
-                data-cy="projectItemList"
-                label={translate('managerProductStockApp.projectItemListItem.projectItemList')}
-                type="select"
-                required
-              >
-                <option value="" key="0" />
-                {projectItemLists
-                  ? projectItemLists.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.name}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <FormText>
-                <Translate contentKey="entity.validation.required">This field is required.</Translate>
-              </FormText>
-              <ValidatedField
                 id="project-item-list-item-item"
                 name="item"
                 data-cy="item"
@@ -188,21 +147,15 @@ export const ProjectItemListItemUpdate = (props: RouteComponentProps<{ id: strin
                 <Translate contentKey="entity.validation.required">This field is required.</Translate>
               </FormText>
               <ValidatedField
-                id="project-item-list-item-providerItem"
-                name="providerItem"
-                data-cy="providerItem"
-                label={translate('managerProductStockApp.projectItemListItem.providerItem')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {providerItems
-                  ? providerItems.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.name}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
+                label={translate('managerProductStockApp.projectItemListItem.dimension')}
+                id="project-item-list-item-dimension"
+                name="dimension"
+                data-cy="dimension"
+                type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                }}
+              />
               <ValidatedField
                 id="project-item-list-item-unit"
                 name="unit"
@@ -214,6 +167,53 @@ export const ProjectItemListItemUpdate = (props: RouteComponentProps<{ id: strin
                 <option value="" key="0" />
                 {units
                   ? units.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.name}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <FormText>
+                <Translate contentKey="entity.validation.required">This field is required.</Translate>
+              </FormText>
+              <ValidatedField
+                label={translate('managerProductStockApp.projectItemListItem.quantity')}
+                id="project-item-list-item-quantity"
+                name="quantity"
+                data-cy="quantity"
+                type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                  validate: v => isNumber(v) || translate('entity.validation.number'),
+                }}
+              />
+              <ValidatedField
+                id="project-item-list-item-providerItem"
+                name="providerItem"
+                data-cy="providerItem"
+                label={translate('managerProductStockApp.projectItemListItem.providerItem')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {providerItems
+                  ? providerItems.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.name} | {otherEntity.cost} {otherEntity.unit.name}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="project-item-list-item-projectItemList"
+                name="projectItemList"
+                data-cy="projectItemList"
+                label={translate('managerProductStockApp.projectItemListItem.projectItemList')}
+                type="select"
+                required
+              >
+                <option value="" key="0" />
+                {projectItemLists
+                  ? projectItemLists.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
                         {otherEntity.name}
                       </option>

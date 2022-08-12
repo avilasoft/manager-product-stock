@@ -56,7 +56,7 @@ public class ProjectItemListItem implements Serializable {
     private Item item;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "provider", "unit", "item" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "provider", "item" }, allowSetters = true)
     private ProviderItem providerItem;
 
     @ManyToOne(optional = false)

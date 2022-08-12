@@ -105,33 +105,42 @@ export const ProjectItemListItem = (props: RouteComponentProps<{ url: string }>)
                 <th className="hand" onClick={sort('id')}>
                   <Translate contentKey="managerProductStockApp.projectItemListItem.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                {/*
                 <th className="hand" onClick={sort('code')}>
                   <Translate contentKey="managerProductStockApp.projectItemListItem.code">Code</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('name')}>
                   <Translate contentKey="managerProductStockApp.projectItemListItem.name">Name</Translate> <FontAwesomeIcon icon="sort" />
+        </th>*/}
+                <th>
+                  <Translate contentKey="managerProductStockApp.projectItemListItem.item">Item</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('dimension')}>
                   <Translate contentKey="managerProductStockApp.projectItemListItem.dimension">Dimension</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  <Translate contentKey="managerProductStockApp.projectItemListItem.unit">Unit</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('quantity')}>
                   <Translate contentKey="managerProductStockApp.projectItemListItem.quantity">Quantity</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  <Translate contentKey="managerProductStockApp.projectItemListItem.projectItemList">Project Item List</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
-                <th>
-                  <Translate contentKey="managerProductStockApp.projectItemListItem.item">Item</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th>
                   <Translate contentKey="managerProductStockApp.projectItemListItem.providerItem">Provider Item</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  <Translate contentKey="managerProductStockApp.projectItemListItem.unit">Unit</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="managerProductStockApp.projectItemListItem.providerItemCost">Provider Item Cost</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  <Translate contentKey="managerProductStockApp.projectItemListItem.providerItemUnit">Provider Item Unit</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  <Translate contentKey="managerProductStockApp.projectItemListItem.projectItemList">Project Item List</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -144,19 +153,9 @@ export const ProjectItemListItem = (props: RouteComponentProps<{ url: string }>)
                       {projectItemListItem.id}
                     </Button>
                   </td>
+                  {/*
                   <td>{projectItemListItem.code}</td>
-                  <td>{projectItemListItem.name}</td>
-                  <td>{projectItemListItem.dimension}</td>
-                  <td>{projectItemListItem.quantity}</td>
-                  <td>
-                    {projectItemListItem.projectItemList ? (
-                      <Link to={`project-item-list/${projectItemListItem.projectItemList.id}`}>
-                        {projectItemListItem.projectItemList.name}
-                      </Link>
-                    ) : (
-                      ''
-                    )}
-                  </td>
+              <td>{projectItemListItem.name}</td>*/}
                   <td>
                     {projectItemListItem.item ? (
                       <Link to={`item/${projectItemListItem.item.id}`}>{projectItemListItem.item.name}</Link>
@@ -164,6 +163,15 @@ export const ProjectItemListItem = (props: RouteComponentProps<{ url: string }>)
                       ''
                     )}
                   </td>
+                  <td>{projectItemListItem.dimension}</td>
+                  <td>
+                    {projectItemListItem.unit ? (
+                      <Link to={`unit/${projectItemListItem.unit.id}`}>{projectItemListItem.unit.name}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>{projectItemListItem.quantity}</td>
                   <td>
                     {projectItemListItem.providerItem ? (
                       <Link to={`provider-item/${projectItemListItem.providerItem.id}`}>{projectItemListItem.providerItem.name}</Link>
@@ -171,9 +179,13 @@ export const ProjectItemListItem = (props: RouteComponentProps<{ url: string }>)
                       ''
                     )}
                   </td>
+                  <td>{projectItemListItem.providerItem ? projectItemListItem.providerItem.cost : ''}</td>
+                  <td>{projectItemListItem.providerItem ? projectItemListItem.providerItem.unit.name : ''}</td>
                   <td>
-                    {projectItemListItem.unit ? (
-                      <Link to={`unit/${projectItemListItem.unit.id}`}>{projectItemListItem.unit.name}</Link>
+                    {projectItemListItem.projectItemList ? (
+                      <Link to={`project-item-list/${projectItemListItem.projectItemList.id}`}>
+                        {projectItemListItem.projectItemList.name}
+                      </Link>
                     ) : (
                       ''
                     )}

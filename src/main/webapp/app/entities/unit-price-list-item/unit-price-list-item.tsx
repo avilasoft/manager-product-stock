@@ -103,12 +103,13 @@ export const UnitPriceListItem = (props: RouteComponentProps<{ url: string }>) =
                 <th className="hand" onClick={sort('id')}>
                   <Translate contentKey="managerProductStockApp.unitPriceListItem.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                {/*
                 <th className="hand" onClick={sort('code')}>
                   <Translate contentKey="managerProductStockApp.unitPriceListItem.code">Code</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('name')}>
                   <Translate contentKey="managerProductStockApp.unitPriceListItem.name">Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
+                </th>*/}
                 <th className="hand" onClick={sort('unitCostTotal')}>
                   <Translate contentKey="managerProductStockApp.unitPriceListItem.unitCostTotal">Unit Cost Total</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />

@@ -26,6 +26,8 @@
       "projectItemList": "Project Item List",
       "item": "Item",
       "providerItem": "Provider Item",
+      "providerItemCost": "Provider Item Cost",
+      "providerItemUnit": "Provider Item Unit",
       "unit": "Unit"
     }
   }
