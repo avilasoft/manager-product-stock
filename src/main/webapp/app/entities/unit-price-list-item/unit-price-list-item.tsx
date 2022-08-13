@@ -133,8 +133,9 @@ export const UnitPriceListItem = (props: RouteComponentProps<{ url: string }>) =
                       {unitPriceListItem.id}
                     </Button>
                   </td>
+                  {/* 
                   <td>{unitPriceListItem.code}</td>
-                  <td>{unitPriceListItem.name}</td>
+                  <td>{unitPriceListItem.name}</td>*/}
                   <td>{unitPriceListItem.unitCostTotal}</td>
                   <td>
                     {unitPriceListItem.projectItemListItem ? (
