@@ -7,6 +7,19 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "businessAssociate": "Business Associate",
+        "unit": "Unit",
+        "project": "Project",
+        "projectGroup": "Project Group",
+        "projectItemList": "Project Item List",
+        "projectItemListItem": "Project Item List Item",
+        "item": "Item",
+        "provider": "Provider",
+        "providerItem": "Provider Item",
+        "unitPriceList": "Unit Price List",
+        "unitPriceListItem": "Unit Price List Item",
+        "computedPriceList": "Computed Price List",
+        "computedPriceListItem": "Computed Price List Item",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

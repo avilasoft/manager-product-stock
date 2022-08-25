@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20220818001133",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "unit",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "symbol",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "UnitType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MASS_OR_WEIGHT,VOLUME,AMOUNT,MONEY"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Unit",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "projectItemListItem",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "projectItemListItem",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "providerItem",
+      "otherEntityRelationshipName": "unit",
+      "relationshipName": "providerItem",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

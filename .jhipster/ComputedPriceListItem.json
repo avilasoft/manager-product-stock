@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220818001144",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "computed_price_list_item",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "computedPriceTotal",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "computedQuantityTotal",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ComputedPriceListItem",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "unitPriceListTotal",
+      "otherEntityName": "unitPriceList",
+      "otherEntityRelationshipName": "computedPriceListItem",
+      "relationshipName": "unitPriceList",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "computedPriceList",
+      "otherEntityRelationshipName": "computedPriceListItem",
+      "relationshipName": "computedPriceList",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

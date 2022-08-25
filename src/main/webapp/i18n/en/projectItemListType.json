@@ -1,0 +1,12 @@
+{
+  "managerProductStockApp": {
+    "ProjectItemListType": {
+      "null": "",
+      "EXCAVACION": "EXCAVACION",
+      "DE": "DE",
+      "ZANJAS": "ZANJAS",
+      "RELLENO": "RELLENO",
+      "OTRO": "OTRO"
+    }
+  }
+}

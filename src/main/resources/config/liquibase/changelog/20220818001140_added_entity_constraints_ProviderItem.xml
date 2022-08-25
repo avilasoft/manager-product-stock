@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity ProviderItem.
+    -->
+    <changeSet id="20220818001140-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="provider_id"
+                                 baseTableName="provider_item"
+                                 constraintName="fk_provider_item__provider_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="provider"/>
+
+        <addForeignKeyConstraint baseColumnNames="unit_id"
+                                 baseTableName="provider_item"
+                                 constraintName="fk_provider_item__unit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit"/>
+
+        <addForeignKeyConstraint baseColumnNames="item_id"
+                                 baseTableName="provider_item"
+                                 constraintName="fk_provider_item__item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity ProjectItemList.
+    -->
+    <changeSet id="20220818001136-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="unit_price_list_id"
+                                 baseTableName="project_item_list"
+                                 constraintName="fk_project_item_list__unit_price_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit_price_list"/>
+
+        <addForeignKeyConstraint baseColumnNames="computed_price_list_id"
+                                 baseTableName="project_item_list"
+                                 constraintName="fk_project_item_list__computed_price_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="computed_price_list"/>
+
+        <addForeignKeyConstraint baseColumnNames="project_id"
+                                 baseTableName="project_item_list"
+                                 constraintName="fk_project_item_list__project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+    </changeSet>
+</databaseChangeLog>

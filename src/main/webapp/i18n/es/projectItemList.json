@@ -1,0 +1,30 @@
+{
+  "managerProductStockApp": {
+    "projectItemList": {
+      "home": {
+        "title": "Project Item Lists",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Project Item List",
+        "createOrEditLabel": "Crear o editar Project Item List",
+        "notFound": "Ningún Project Item Lists encontrado"
+      },
+      "created": "Un nuevo Project Item List ha sido creado con el identificador {{ param }}",
+      "updated": "Un Project Item List ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Project Item List ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Project Item List {{ id }}?"
+      },
+      "detail": {
+        "title": "Project Item List"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "type": "Type",
+      "status": "Status",
+      "unitPriceList": "Unit Price List",
+      "computedPriceList": "Computed Price List",
+      "project": "Project"
+    }
+  }
+}

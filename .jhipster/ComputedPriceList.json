@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20220818001143",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "computed_price_list",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "computedPriceListTotal",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ComputedPriceList",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "computedPriceListItem",
+      "otherEntityRelationshipName": "computedPriceList",
+      "relationshipName": "computedPriceListItem",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "projectItemList",
+      "otherEntityRelationshipName": "computedPriceList",
+      "ownerSide": false,
+      "relationshipName": "projectItemList",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

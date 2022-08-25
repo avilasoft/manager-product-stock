@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity ProjectItemListItem.
+    -->
+    <changeSet id="20220818001137-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="unit_price_list_item_id"
+                                 baseTableName="project_item_list_item"
+                                 constraintName="fk_project_item_list_item__unit_price_list_item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit_price_list_item"/>
+
+        <addForeignKeyConstraint baseColumnNames="project_item_list_id"
+                                 baseTableName="project_item_list_item"
+                                 constraintName="fk_project_item_list_item__project_item_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project_item_list"/>
+
+        <addForeignKeyConstraint baseColumnNames="item_id"
+                                 baseTableName="project_item_list_item"
+                                 constraintName="fk_project_item_list_item__item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"/>
+
+        <addForeignKeyConstraint baseColumnNames="provider_item_id"
+                                 baseTableName="project_item_list_item"
+                                 constraintName="fk_project_item_list_item__provider_item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="provider_item"/>
+
+        <addForeignKeyConstraint baseColumnNames="unit_id"
+                                 baseTableName="project_item_list_item"
+                                 constraintName="fk_project_item_list_item__unit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit"/>
+    </changeSet>
+</databaseChangeLog>

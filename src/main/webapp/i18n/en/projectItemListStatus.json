@@ -1,0 +1,10 @@
+{
+  "managerProductStockApp": {
+    "ProjectItemListStatus": {
+      "null": "",
+      "DRAFT": "DRAFT",
+      "COMPLETE": "COMPLETE",
+      "DISCARD": "DISCARD"
+    }
+  }
+}

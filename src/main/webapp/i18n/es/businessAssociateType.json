@@ -1,0 +1,10 @@
+{
+  "managerProductStockApp": {
+    "BusinessAssociateType": {
+      "null": "",
+      "PROVIDER": "PROVIDER",
+      "CLIENT": "CLIENT",
+      "COMPANY": "COMPANY"
+    }
+  }
+}
